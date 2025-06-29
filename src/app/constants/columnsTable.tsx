@@ -47,7 +47,7 @@ export const columnsTable = (onSelect: (row: PokemonRow) => void): TableColumn<P
     name: "Salud base",
     selector: (row: PokemonRow) => row.data.stats[0].base_stat,
     cell: (row: PokemonRow) => (
-      <p className={`${row.data.stats[0].base_stat >= 80 ? 'bg-green-500' : 'bg-red-500'} w-[50px] p-2 text-center rounded-md`}>{row.data.stats[0].base_stat}</p>
+      <p className={`${row.data.stats[0].base_stat >= 80 ? 'bg-green-500' : 'bg-red-500'} w-[50px] p-2 text-center rounded-md text-white`}>{row.data.stats[0].base_stat}</p>
     ),
     sortable: true,
   },
@@ -55,7 +55,7 @@ export const columnsTable = (onSelect: (row: PokemonRow) => void): TableColumn<P
     name: "Ataque base",
     selector: (row: PokemonRow) => row.data.stats[1].base_stat,
     cell: (row: PokemonRow) => (
-      <p className={`${row.data.stats[1].base_stat >= 60 ? 'bg-green-500' : 'bg-red-500'} w-[50px] p-2 text-center rounded-md`}>{row.data.stats[1].base_stat}</p>
+      <p className={`${row.data.stats[1].base_stat >= 60 ? 'bg-green-500' : 'bg-red-500'} w-[50px] p-2 text-center rounded-md text-white`}>{row.data.stats[1].base_stat}</p>
     ),
     sortable: true,
   },
@@ -63,7 +63,7 @@ export const columnsTable = (onSelect: (row: PokemonRow) => void): TableColumn<P
     name: "Defensa base",
     selector: (row: PokemonRow) => row.data.stats[2].base_stat,
     cell: (row: PokemonRow) => (
-      <p className={`${row.data.stats[2].base_stat >= 70 ? 'bg-green-500' : 'bg-red-500'} w-[50px] p-2 text-center rounded-md`}>{row.data.stats[2].base_stat}</p>
+      <p className={`${row.data.stats[2].base_stat >= 70 ? 'bg-green-500' : 'bg-red-500'} w-[50px] p-2 text-center rounded-md text-white`}>{row.data.stats[2].base_stat}</p>
     ),
     sortable: true,
   },
@@ -71,7 +71,7 @@ export const columnsTable = (onSelect: (row: PokemonRow) => void): TableColumn<P
     name: "Ataque especial",
     selector: (row: PokemonRow) => row.data.stats[3].base_stat,
     cell: (row: PokemonRow) => (
-      <p className={`${row.data.stats[3].base_stat >= 60 ? 'bg-green-500' : 'bg-red-500'} w-[50px] p-2 text-center rounded-md`}>{row.data.stats[3].base_stat}</p>
+      <p className={`${row.data.stats[3].base_stat >= 60 ? 'bg-green-500' : 'bg-red-500'} w-[50px] p-2 text-center rounded-md text-white`}>{row.data.stats[3].base_stat}</p>
     ),
     sortable: true,
   },
@@ -79,7 +79,7 @@ export const columnsTable = (onSelect: (row: PokemonRow) => void): TableColumn<P
     name: "Defensa especial",
     selector: (row: PokemonRow) => row.data.stats[5].base_stat,
     cell: (row: PokemonRow) => (
-      <p className={`${row.data.stats[4].base_stat >= 70 ? 'bg-green-500' : 'bg-red-500'} w-[50px] p-2 text-center rounded-md`}>{row.data.stats[4].base_stat}</p>
+      <p className={`${row.data.stats[4].base_stat >= 70 ? 'bg-green-500' : 'bg-red-500'} w-[50px] p-2 text-center rounded-md text-white`}>{row.data.stats[4].base_stat}</p>
     ),
     sortable: true,
   },

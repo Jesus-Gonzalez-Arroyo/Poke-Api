@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { infoPokemon, PokemonData } from "../types/pokemons";
+import { infoPokemon, PokemonRow } from "../types/pokemons";
 
 export default function usePokemons() {
-    const [pokemons, setPokemons] = useState<PokemonData[]>([]);
+    const [pokemons, setPokemons] = useState<PokemonRow[]>([]);;
     const [loading, setLoading] = useState(true);
     const [isGrid, setIsGrid] = useState(false)
-    const [selectedPokemon, setSelectedPokemon] = useState(null);
+    const [selectedPokemon, setSelectedPokemon] =  useState<PokemonRow | null>(null);
     const [selectedType, setSelectedType] = useState("todos");
-    const [types, setTypes] = useState([])
+    const [types, setTypes] = useState<string[]>([])
 
     useEffect(() => {
         const getInfoPokemons = async () => {
@@ -26,12 +26,10 @@ export default function usePokemons() {
                 const allTypes = Array.from(
                     new Set(
                         dataPokemons.flatMap(pokemon =>
-                            pokemon.data.types.map((t: any) => t.type.name)
+                            pokemon.data.types.map((typePokemon: {type: {name: string}}) => typePokemon.type.name)
                         )
                     )
                 ).sort();
-
-                console.log('al', allTypes)
 
                 setPokemons(dataPokemons);
                 setTypes(allTypes)
@@ -46,8 +44,7 @@ export default function usePokemons() {
     }, []);
 
     function changeView() {
-        setIsGrid(prev => !prev)
-        console.log('hola')
+        setIsGrid((prev: boolean) => !prev)
     }
 
     return { pokemons, loading, changeView, isGrid, selectedPokemon, setSelectedPokemon, selectedType, setSelectedType, types };

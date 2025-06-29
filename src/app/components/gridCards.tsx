@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Props } from '../types/pokemons'
+import { PropsGridCards } from '../types/pokemons'
 
 export default function GridCard({
     data,
     itemsPerPage = 20,
     onSelect,
-}: Props) {
+}: PropsGridCards) {
     const [currentPage, setCurrentPage] = useState(1);
 
     const totalPages = Math.ceil(data.length / itemsPerPage);

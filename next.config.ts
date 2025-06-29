@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  basePath: '/poke-api',
+  assetPrefix: '/poke-api',
+  images: {
+    unoptimized: true,
+  }
 };
 
 export default nextConfig;
